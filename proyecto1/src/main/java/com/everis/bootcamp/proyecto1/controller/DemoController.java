@@ -21,7 +21,7 @@ public class DemoController {
         return  Mono.just("¡Hola Mundo!");
     }
 
-    @GetMapping("/nombrecompleto")
+    @GetMapping("/nombrecompleto1")
     public Mono<String> getNombreCompleto(@RequestParam String nombre, @RequestParam String apellido){
         DatosPersonales datos = new DatosPersonales(nombre, apellido);
         return service.getFullSaludo(datos);
