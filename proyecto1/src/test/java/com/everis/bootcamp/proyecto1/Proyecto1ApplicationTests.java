@@ -1,4 +1,4 @@
-package com.example.proyecto1;
+package com.everis.bootcamp.proyecto1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

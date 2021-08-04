@@ -1,4 +1,4 @@
-package com.example.proyecto1;
+package com.everis.bootcamp.proyecto1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
