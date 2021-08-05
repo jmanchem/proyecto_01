@@ -34,4 +34,18 @@ public class FuncionarioController {
         log.info("funcionario entrante: "+ funcionario);
         return this.funcionarioService.criar(funcionario);
     }
+
+    @GetMapping("/rango")
+    public List<Funcionario> obtenerFuncionariosPorIdade(
+            @RequestParam("de") Integer de,
+            @RequestParam("ate") Integer ate){
+        log.info("de: "+ de);
+        log.info("ate: "+ ate);
+        return this.funcionarioService.obtenerFuncionariosPorIdade(de,ate);
+    }
+    @GetMapping("/nombre")
+    public List<Funcionario> obtenerFuncionariosPorNome(@RequestParam("name") String name){
+        log.info("name: "+ name);
+        return this.funcionarioService.obtenerFuncionariosPorNome(name);
+    }
 }

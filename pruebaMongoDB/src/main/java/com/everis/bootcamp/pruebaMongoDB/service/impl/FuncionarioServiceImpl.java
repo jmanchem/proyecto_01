@@ -33,6 +33,7 @@ public class FuncionarioServiceImpl implements FuncionarioService {
         log.info("funcionario: "+ funcionario);
         return this.funcionarioRepository.save(funcionario);
     }
+
     @Override
     public Funcionario criarIndexado(Funcionario funcionario) {
         log.info("codigo Chefe: "+ funcionario.getChefe().getCodigo());
@@ -45,5 +46,16 @@ public class FuncionarioServiceImpl implements FuncionarioService {
         log.info("funcionario: "+ funcionario);
         return this.funcionarioRepository.save(funcionario);
     }
+
+    @Override
+    public List<Funcionario> obtenerFuncionariosPorIdade(Integer de, Integer ate) {
+        return this.funcionarioRepository.obtenerFuncionariosPorIdade(de,ate);
+    }
+
+    @Override
+    public List<Funcionario> obtenerFuncionariosPorNome(String nome) {
+        return this.funcionarioRepository.findFuncionarioByName(nome);
+    }
+
 
 }
