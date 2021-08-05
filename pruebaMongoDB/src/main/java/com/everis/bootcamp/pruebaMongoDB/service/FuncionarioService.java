@@ -7,5 +7,6 @@ import java.util.List;
 public interface FuncionarioService {
     public List<Funcionario> obtenerTodos();
     public Funcionario obtenerPorCodigo(String codigo);
+    public Funcionario criarIndexado(Funcionario funcionario);
     public Funcionario criar(Funcionario funcionario);
 }
