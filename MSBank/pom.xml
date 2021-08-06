@@ -8,7 +8,7 @@
 		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.everis.bootcamp</groupId>
+	<groupId>com.Bootcamp</groupId>
 	<artifactId>MSBank</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MSBank</name>
@@ -45,7 +45,6 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<build>
