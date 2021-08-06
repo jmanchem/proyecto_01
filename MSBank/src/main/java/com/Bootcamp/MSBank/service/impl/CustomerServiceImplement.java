@@ -20,4 +20,11 @@ public class CustomerServiceImplement implements CustomerService {
         return customerRepository.save(customer);
     }
 
+    @Override
+    public Customer findCustomerById(String id){
+        return this.customerRepository
+                .findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Customer doesn't exist"));
+    }
+
 }
