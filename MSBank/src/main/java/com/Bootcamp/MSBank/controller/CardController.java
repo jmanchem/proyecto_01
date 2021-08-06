@@ -4,10 +4,7 @@ import com.Bootcamp.MSBank.model.Card;
 import com.Bootcamp.MSBank.service.CardService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -17,12 +14,12 @@ public class CardController {
     CardService cardService;
 
     @PostMapping("/createCard")
-    public Card  createCard(Card card){
+    public Card  createCard(@RequestBody Card card){
         return this.cardService.createCard(card);
     }
 
     @GetMapping("/findCardById")
-    public Card findCardById(String cardId){
+    public Card findCardById(@PathVariable String cardId){
         return this.cardService.findCardbById(cardId);
     }
 

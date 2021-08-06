@@ -10,11 +10,11 @@ public class Card {
     private String cardId;
     private String cardPassword;
     private String customerId;
-    private String DocumentNumber;
+    private String documentNumber;
     private String cardNumber;
     private String cardName;
     private String expirationDate;
-    private String securityCode;
+    private int securityCode;
     private byte status;
     private Date timestamp;
 }
