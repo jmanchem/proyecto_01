@@ -4,5 +4,5 @@ import com.Bootcamp.MSBank.model.SavingAccount;
 
 public interface SavingAccountService {
     public SavingAccount createSavingAccount(SavingAccount savingAccount);
-
+    public SavingAccount findSavingAccountById(String accuntId);
 }
