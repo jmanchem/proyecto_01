@@ -3,6 +3,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.*;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @Document //Se le puede poner otro nombre
@@ -16,5 +17,5 @@ public class SavingAccount {
     private String typeCurrency;//Tipo de moneda
     private String balance;
     private String status;
-    private String timestamp;
+    private Date timestamp;
 }

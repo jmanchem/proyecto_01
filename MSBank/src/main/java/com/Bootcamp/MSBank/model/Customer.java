@@ -19,5 +19,5 @@ public class Customer {
     private String email;
     private String customerType;
     private String customerType2;
-    private String timestamp;
+    private Date timestamp;
 }
