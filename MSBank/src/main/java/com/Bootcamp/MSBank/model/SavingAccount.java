@@ -8,12 +8,12 @@ import java.math.BigDecimal;
 @Document //Se le puede poner otro nombre
 public class SavingAccount {
     @Id //Propiedade
-    private String idAccount;
-    private String idClient;
+    private String accuntId;
+    private String customerId;
     private String numberAccount;
     private String cardNumber;
     private String password;
-    private String typeCurrency;
+    private String typeCurrency;//Tipo de moneda
     private String balance;
     private String status;
     private String timestamp;
