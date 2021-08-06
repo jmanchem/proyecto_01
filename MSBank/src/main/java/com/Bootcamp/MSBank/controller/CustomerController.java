@@ -20,7 +20,7 @@ public class CustomerController {
         return this.customerService.createCustomer(customer);
     }
 
-    @GetMapping("findCustomerById/{id}")
+    @GetMapping("/findCustomerById/{id}")
     public Customer findCustomerById(@PathVariable String id){
         return  this.customerService.findCustomerById(id);
     }

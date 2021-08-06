@@ -20,13 +20,13 @@ public class SavingAccountImpl implements SavingAccountService {
         return this.savingAccountRepository.save(saveAccount);
     }
     @Override
-    public SavingAccount findSavingAccountById(String accuntId) {
-        log.info("codeAccount: "+ accuntId);
+    public SavingAccount findSavingAccountById(String accountId) {
+        log.info("accountId: "+ accountId);
         log.info("savingAccountRepository: "+ this.savingAccountRepository
-                .findById(accuntId)
+                .findById(accountId)
                 .orElseThrow(()-> new IllegalArgumentException("Account not found")));
         return this.savingAccountRepository
-                   .findById(accuntId)
+                   .findById(accountId)
                    .orElseThrow(()-> new IllegalArgumentException("Account not found"));
     }
 }
