@@ -17,7 +17,7 @@ public class CustomerController {
     @PostMapping("/createCustomer")
     public Customer createCustomer(@RequestBody Customer customer){
         log.info("customer: "+ customer);
-        return customerService.createCustomer(customer);
+        return this.customerService.createCustomer(customer);
     }
 
     @GetMapping("findCustomerById/{id}")
