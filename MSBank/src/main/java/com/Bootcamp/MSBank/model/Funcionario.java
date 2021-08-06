@@ -13,13 +13,9 @@ public class Funcionario {
 
     @Id //Propiedade
     private String codigo;
-
     private String name;
-
     private Integer idade;
-
     private BigDecimal salario;
-
     @DBRef //Referencia de una coleccion dentro de otro
     private Funcionario chefe;
 }

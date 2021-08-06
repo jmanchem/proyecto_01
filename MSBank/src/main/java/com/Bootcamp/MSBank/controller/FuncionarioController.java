@@ -1,7 +1,9 @@
 package com.Bootcamp.MSBank.controller;
 
 import com.Bootcamp.MSBank.model.Funcionario;
+import com.Bootcamp.MSBank.model.SavingAccount;
 import com.Bootcamp.MSBank.service.FuncionarioService;
+import com.Bootcamp.MSBank.service.SavingAccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +15,6 @@ import java.util.List;
 @RequestMapping("/funcionarios")
 
 public class FuncionarioController {
-
     @Autowired
     private FuncionarioService funcionarioService;
 
@@ -48,4 +49,6 @@ public class FuncionarioController {
         log.info("name: "+ name);
         return this.funcionarioService.obtenerFuncionariosPorNome(name);
     }
+
+
 }
