@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class SavingAccountController {
     @Autowired
     private SavingAccountService savingAccountService;
-    @GetMapping("/createSavingAccount")
+    @PostMapping("/createSavingAccount")
     public SavingAccount createSavingAccount (@RequestBody SavingAccount savingAccount){
         log.info("SavingAccount: "+ savingAccount);
         return this.savingAccountService.createSavingAccount(savingAccount);

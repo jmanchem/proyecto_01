@@ -1,11 +1,8 @@
 package com.Bootcamp.MSBank.model;
-
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.Date;
-
 @Data
 @Document
 public class Card {
@@ -18,6 +15,6 @@ public class Card {
     private String cardName;
     private String expirationDate;
     private String securityCode;
-    private String status;
+    private byte status;
     private Date timestamp;
 }

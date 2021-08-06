@@ -13,7 +13,7 @@ public class CurrentAccount {
     private String cardId;
     private String cardNumber;
     private String currencyType;
-    private String balance;
-    private String status;
+    private double balance;
+    private byte status;
     private Date timestamp;
 }

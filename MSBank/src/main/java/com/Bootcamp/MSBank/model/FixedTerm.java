@@ -13,7 +13,7 @@ public class FixedTerm {
     private String cardId;
     private String cardNumber;
     private String currencyType;//(tipo moneda);
-    private String balance;//Saldo
-    private String status;
+    private double balance;//Saldo
+    private byte status;
     private Date timestamp;
 }

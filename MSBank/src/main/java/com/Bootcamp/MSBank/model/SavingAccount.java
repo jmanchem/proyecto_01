@@ -13,7 +13,7 @@ public class SavingAccount {
     private String cardId;
     private String cardNumber;
     private String currencyType;//Tipo de moneda
-    private String balance;
-    private String status;
+    private double balance;
+    private byte status;
     private Date timestamp;
 }

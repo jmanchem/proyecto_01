@@ -9,7 +9,6 @@ import java.util.Date;
 public class Customer {
     @Id
     private String customerId;
-
     private String name;
     private String lastname;
     private String documentType;

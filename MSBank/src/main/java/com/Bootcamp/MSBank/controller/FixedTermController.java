@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class FixedTermController {
     @Autowired
     private FixedTermService fixedTermService;
-    @GetMapping("/createFixedTerm")
+    @PostMapping("/createFixedTerm")
     public FixedTerm createSavingAccount (@RequestBody FixedTerm fixedTerm){
         log.info("funcionario entrante: "+ fixedTerm);
         return this.fixedTermService.createFixedTerm(fixedTerm);
