@@ -1,5 +1,6 @@
 package com.Bootcamp.MSBank.service.impl;
 
+import com.Bootcamp.MSBank.model.Funcionario;
 import com.Bootcamp.MSBank.model.SavingAccount;
 import com.Bootcamp.MSBank.repository.SavingAccountRepository;
 import com.Bootcamp.MSBank.service.SavingAccountService;
@@ -18,5 +19,14 @@ public class SavingAccountImpl implements SavingAccountService {
         log.info("SavingAccount: "+ saveAccount);
         return this.savingAccountRepository.save(saveAccount);
     }
-
+    @Override
+    public SavingAccount findSavingAccountById(String accuntId) {
+        log.info("codeAccount: "+ accuntId);
+        log.info("savingAccountRepository: "+ this.savingAccountRepository
+                .findById(accuntId)
+                .orElseThrow(()-> new IllegalArgumentException("Account not found")));
+        return this.savingAccountRepository
+                   .findById(accuntId)
+                   .orElseThrow(()-> new IllegalArgumentException("Account not found"));
+    }
 }
