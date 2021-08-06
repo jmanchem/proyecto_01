@@ -15,7 +15,7 @@ public class SavingAccountController {
     private SavingAccountService savingAccountService;
     @GetMapping("/createSavingAccount")
     public SavingAccount createSavingAccount (@RequestBody SavingAccount savingAccount){
-        log.info("funcionario entrante: "+ savingAccount);
+        log.info("SavingAccount: "+ savingAccount);
         return this.savingAccountService.createSavingAccount(savingAccount);
     }
     @GetMapping("/findSavingAccountById/{accuntId}")
