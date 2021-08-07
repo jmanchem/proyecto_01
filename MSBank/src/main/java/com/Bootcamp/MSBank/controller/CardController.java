@@ -18,7 +18,7 @@ public class CardController {
         return this.cardService.createCard(card);
     }
 
-    @GetMapping("/findCardById")
+    @GetMapping("/findCardById/{cardId}")
     public Card findCardById(@PathVariable String cardId){
         return this.cardService.findCardbById(cardId);
     }
