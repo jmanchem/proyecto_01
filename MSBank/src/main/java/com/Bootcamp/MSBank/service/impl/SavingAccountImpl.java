@@ -34,16 +34,8 @@ public class SavingAccountImpl implements SavingAccountService {
                    .findById(accountIdS)
                    .orElseThrow(()-> new IllegalArgumentException("Account not found"));
     }
-
     @Override
     public long findSavingAccountByCustomerId(String customerId){
-        //customer.setCustomerId(customerId);
         return this.savingAccountRepository.findSavingAccountByCustomerId(customerId);
-                //.orElseThrow(() -> new IllegalArgumentException("Customer doesn't have a saving account"));
-
-        /*Query query = new Query();
-        query.addCriteria(Criteria.where("customerId").is(customerId));
-        return this.savingAccountRepository.count(query, COLLECTION);*/
-
     }
 }
