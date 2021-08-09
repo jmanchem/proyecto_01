@@ -26,7 +26,7 @@ public class SavingAccountController {
     }
 
     @GetMapping("/findSavingAccountByCustomerId/{customerId}")
-    public SavingAccount findSavingAccountByCustomerId(@PathVariable String customerId){
+    public long findSavingAccountByCustomerId(@PathVariable String customerId){
         return this.savingAccountService.findSavingAccountByCustomerId(customerId);
     }
 
