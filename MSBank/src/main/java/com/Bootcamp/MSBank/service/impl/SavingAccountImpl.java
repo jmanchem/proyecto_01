@@ -1,9 +1,6 @@
 package com.Bootcamp.MSBank.service.impl;
 
-import com.Bootcamp.MSBank.model.Customer;
-import com.Bootcamp.MSBank.model.Funcionario;
-import com.Bootcamp.MSBank.model.SavingAccount;
-import com.Bootcamp.MSBank.model.Transaction;
+import com.Bootcamp.MSBank.model.*;
 import com.Bootcamp.MSBank.repository.SavingAccountRepository;
 import com.Bootcamp.MSBank.service.SavingAccountService;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+
+import java.util.List;
 
 @Slf4j
 @Service //DEnotar como un servicio
@@ -35,7 +35,9 @@ public class SavingAccountImpl implements SavingAccountService {
                    .orElseThrow(()-> new IllegalArgumentException("Account not found"));
     }
     @Override
-    public long findSavingAccountByCustomerId(String customerId){
+    public List<SavingAccount> findSavingAccountByCustomerId(String customerId){
+         /*Flux<SavingAccount> savingAccountFlux =numbersAccounts.map(nombre-> new Usuario(nombre.split(" ")[0].toUpperCase(),
+                nombre.split(" ")[1].toUpperCase()))*/
         return this.savingAccountRepository.findSavingAccountByCustomerId(customerId);
     }
 }

@@ -1,10 +1,14 @@
 package com.Bootcamp.MSBank.controller;
 
 import com.Bootcamp.MSBank.model.SavingAccount;
+import com.Bootcamp.MSBank.model.Usuario;
 import com.Bootcamp.MSBank.service.SavingAccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -22,9 +26,8 @@ public class SavingAccountController {
         log.info("codAccount: "+ accountId);
         return this.savingAccountService.findSavingAccountById(accountId);
     }
-
     @GetMapping("/findSavingAccountByCustomerId/{customerId}")
-    public long findSavingAccountByCustomerId(@PathVariable String customerId){
+    public List<SavingAccount> findSavingAccountByCustomerId(@PathVariable String customerId){
         return this.savingAccountService.findSavingAccountByCustomerId(customerId);
     }
 
