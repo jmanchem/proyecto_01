@@ -1,0 +1,6 @@
+com\everis\bootcamp\MongoDBootcamp\model\Customer.class
+com\everis\bootcamp\MongoDBootcamp\repository\CustomerRepository.class
+com\everis\bootcamp\MongoDBootcamp\service\CustomerService.class
+com\everis\bootcamp\MongoDBootcamp\service\implementation\CustomerServiceImplement.class
+com\everis\bootcamp\MongoDBootcamp\controller\CustomerController.class
+com\everis\bootcamp\MongoDBootcamp\MongoDBootcampApplication.class

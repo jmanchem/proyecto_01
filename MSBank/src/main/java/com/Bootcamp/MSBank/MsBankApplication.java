@@ -9,6 +9,7 @@ import reactor.core.publisher.Flux;
 
 import java.util.Locale;
 
+
 @Slf4j
 @SpringBootApplication
 public class MsBankApplication implements CommandLineRunner {
@@ -16,6 +17,11 @@ public class MsBankApplication implements CommandLineRunner {
 		SpringApplication.run(MsBankApplication.class, args);
 	}
 
+	@Override
+	public void run(String... args) throws Exception {
+
+	}
+/*
 	@Override
 	public void run(String... args) throws Exception {
 		Flux<String> nombres = Flux.just("Andres Guzman","Pedro Filano","Maria Fulana","Diego Sultano",
@@ -41,4 +47,8 @@ public class MsBankApplication implements CommandLineRunner {
 					}
 				});
 	}
+ */
+
+
+
 }
