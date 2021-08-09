@@ -1,11 +1,8 @@
 package com.Bootcamp.MSBank.controller;
 
-import com.Bootcamp.MSBank.model.Funcionario;
 import com.Bootcamp.MSBank.model.SavingAccount;
-import com.Bootcamp.MSBank.model.Transaction;
 import com.Bootcamp.MSBank.service.SavingAccountService;
 import lombok.extern.slf4j.Slf4j;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -25,5 +25,9 @@ public class CurrentAccountController {
     public CurrentAccount findCurrentAccountById(@PathVariable String accountIdC){
         return  this.currentAccountService.findCurrentAccountById(accountIdC);
     }
+    @GetMapping("/findCurrentAccountByCustomerId/{customerId}")
+    public long findSavingAccountByCustomerId(@PathVariable String customerId){
+        return this.currentAccountService.findCurrentAccountByCustomerId(customerId);
+    }
 
 }
