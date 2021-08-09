@@ -7,7 +7,7 @@ import java.util.Date;
 @Document //Se le puede poner otro nombre
 public class SavingAccount {
     @Id //Propiedade
-    private String accountId;
+    private String accountIdS;
     private String customerId;
     private String accountNumber;
     private String cardId;

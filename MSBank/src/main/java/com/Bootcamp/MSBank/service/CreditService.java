@@ -4,5 +4,5 @@ import com.Bootcamp.MSBank.model.Credit;
 
 public interface CreditService {
     public Credit createCredit(Credit credit);
-    public Credit findCreditById(String id);
+    public Credit findCreditById(String creditId);
 }

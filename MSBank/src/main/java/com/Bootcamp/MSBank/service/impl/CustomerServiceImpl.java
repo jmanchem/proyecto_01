@@ -21,9 +21,9 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer findCustomerById(String id){
+    public Customer findCustomerById(String customerId){
         return this.customerRepository
-                .findById(id)
+                .findById(customerId)
                 .orElseThrow(() -> new IllegalArgumentException("Customer doesn't exist"));
     }
 
