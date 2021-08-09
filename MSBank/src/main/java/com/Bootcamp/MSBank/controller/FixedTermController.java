@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @Slf4j
 @RestController
 @RequestMapping("/FixedTerm")
@@ -23,7 +25,7 @@ public class FixedTermController {
         return this.fixedTermService.findFixedTermById(accountIdF);
     }
     @GetMapping("/findFixedTermByCustomerId/{customerId}")
-    public long findSavingAccountByCustomerId(@PathVariable String customerId){
+    public Map<String,Object> findSavingAccountByCustomerId(@PathVariable String customerId){
         return this.fixedTermService.findFixedTermByCustomerId(customerId);
     }
 }

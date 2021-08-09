@@ -20,11 +20,9 @@ import java.util.List;
 @Slf4j
 @Service //DEnotar como un servicio
 public class SavingAccountImpl implements SavingAccountService {
-
     private static final String COLLECTION = "SavingAccount";
     @Autowired
     private SavingAccountRepository savingAccountRepository;
-
     @Override
     public SavingAccount createSavingAccount(SavingAccount saveAccount) {
         log.info("SavingAccount: "+ saveAccount);
@@ -37,7 +35,6 @@ public class SavingAccountImpl implements SavingAccountService {
                    .findById(accountIdS)
                    .orElseThrow(()-> new IllegalArgumentException("Account not found"));
     }
-
     @Override
     public Map<String,Object> findSavingAccountByCustomerId(String customerId){
         Map<String,Object> response = new HashMap<String,Object>();
@@ -46,5 +43,4 @@ public class SavingAccountImpl implements SavingAccountService {
         response.put("Total",SavingAccountpage.size());
         return response;
     }
-
 }

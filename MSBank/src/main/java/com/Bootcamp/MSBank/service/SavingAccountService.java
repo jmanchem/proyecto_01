@@ -8,6 +8,6 @@ import java.util.Map;
 
 public interface SavingAccountService {
     public SavingAccount createSavingAccount(SavingAccount savingAccount);
-    public SavingAccount findSavingAccountById(String accountId);
+    public SavingAccount findSavingAccountById(String accountIdS);
     public Map<String,Object> findSavingAccountByCustomerId(String customerId);
 }

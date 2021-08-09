@@ -24,9 +24,9 @@ public class SavingAccountController {
         return this.savingAccountService.createSavingAccount(savingAccount);
     }
     @GetMapping("/findSavingAccountById/{accountIdS}")
-    public SavingAccount findSavingAccountById(@PathVariable String accountId){
-        log.info("codAccount: "+ accountId);
-        return this.savingAccountService.findSavingAccountById(accountId);
+    public SavingAccount findSavingAccountById(@PathVariable String accountIdS){
+        log.info("codAccount: "+ accountIdS);
+        return this.savingAccountService.findSavingAccountById(accountIdS);
     }
     @GetMapping("/findSavingAccountByCustomerId/{customerId}")
     public Map<String,Object> findSavingAccountByCustomerId(@PathVariable String customerId){

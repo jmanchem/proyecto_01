@@ -2,8 +2,10 @@ package com.Bootcamp.MSBank.service;
 
 import com.Bootcamp.MSBank.model.CurrentAccount;
 
+import java.util.Map;
+
 public interface CurrentAccountService {
     public CurrentAccount createCurrentAccount(CurrentAccount currentAccount);
     public CurrentAccount findCurrentAccountById(String accountIdC);
-    public long findCurrentAccountByCustomerId(String customerId);
+    public Map<String,Object> findCurrentAccountByCustomerId(String customerId);
 }
