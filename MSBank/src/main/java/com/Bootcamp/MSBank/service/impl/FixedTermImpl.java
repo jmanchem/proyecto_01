@@ -20,4 +20,8 @@ public class FixedTermImpl implements FixedTermService {
                 .findById(accountIdF)
                 .orElseThrow(()-> new IllegalArgumentException("Account not found"));
     }
+    @Override
+    public long findFixedTermByCustomerId(String customerId){
+        return this.fixedTermRepository.findFixedTermByCustomerId(customerId);
+    }
 }

@@ -27,5 +27,9 @@ public class CurrentAccountServiceImpl implements CurrentAccountService {
                 .orElseThrow(() -> new IllegalArgumentException("Current Account doesn't exist"));
 
     }
+    @Override
+    public long findCurrentAccountByCustomerId(String customerId){
+        return this.currentAccountRepository.findCurrentAccountByCustomerId(customerId);
+    }
 
 }

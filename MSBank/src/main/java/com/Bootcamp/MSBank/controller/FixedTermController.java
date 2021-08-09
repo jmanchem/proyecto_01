@@ -17,9 +17,13 @@ public class FixedTermController {
         log.info("funcionario entrante: "+ fixedTerm);
         return this.fixedTermService.createFixedTerm(fixedTerm);
     }
-    @GetMapping("/findSavingAccountById/{accountIdF}")
-    public FixedTerm findSavingAccountById(@PathVariable String accountIdF){
+    @GetMapping("/findFixedTermById/{accountIdF}")
+    public FixedTerm findFixedTermById(@PathVariable String accountIdF){
         log.info("codAccount: "+ accountIdF);
         return this.fixedTermService.findFixedTermById(accountIdF);
+    }
+    @GetMapping("/findFixedTermByCustomerId/{customerId}")
+    public long findSavingAccountByCustomerId(@PathVariable String customerId){
+        return this.fixedTermService.findFixedTermByCustomerId(customerId);
     }
 }
