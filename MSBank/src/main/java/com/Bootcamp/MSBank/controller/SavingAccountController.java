@@ -29,7 +29,7 @@ public class SavingAccountController {
         return this.savingAccountService.findSavingAccountById(accountId);
     }
     @GetMapping("/findSavingAccountByCustomerId/{customerId}")
-    public List<SavingAccount> findSavingAccountByCustomerId(@PathVariable String customerId){
+    public Map<String,Object> findSavingAccountByCustomerId(@PathVariable String customerId){
         return this.savingAccountService.findSavingAccountByCustomerId(customerId);
     }
 

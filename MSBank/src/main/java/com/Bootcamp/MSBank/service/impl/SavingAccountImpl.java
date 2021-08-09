@@ -6,6 +6,7 @@ import com.Bootcamp.MSBank.repository.SavingAccountRepository;
 import com.Bootcamp.MSBank.service.SavingAccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import org.springframework.web.bind.annotation.PathVariable;
@@ -36,11 +37,14 @@ public class SavingAccountImpl implements SavingAccountService {
                    .findById(accountIdS)
                    .orElseThrow(()-> new IllegalArgumentException("Account not found"));
     }
+
     @Override
-    public List<SavingAccount> findSavingAccountByCustomerId(String customerId){
-         /*Flux<SavingAccount> savingAccountFlux =numbersAccounts.map(nombre-> new Usuario(nombre.split(" ")[0].toUpperCase(),
-                nombre.split(" ")[1].toUpperCase()))*/
-        return this.savingAccountRepository.findSavingAccountByCustomerId(customerId);
+    public Map<String,Object> findSavingAccountByCustomerId(String customerId){
+        Map<String,Object> response = new HashMap<String,Object>();
+        List<SavingAccount> SavingAccountpage = this.savingAccountRepository.findSavingAccountByCustomerId(customerId);
+        response.put("data",SavingAccountpage);
+        response.put("Total",SavingAccountpage.size());
+        return response;
     }
 
 }
