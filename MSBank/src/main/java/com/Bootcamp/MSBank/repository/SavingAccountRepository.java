@@ -1,7 +1,6 @@
 package com.Bootcamp.MSBank.repository;
 
 import com.Bootcamp.MSBank.model.SavingAccount;
-import org.json.JSONObject;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
