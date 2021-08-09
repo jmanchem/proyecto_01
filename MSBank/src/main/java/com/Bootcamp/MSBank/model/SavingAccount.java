@@ -16,4 +16,5 @@ public class SavingAccount {
     private double balance;
     private byte status;
     private Date timestamp;
+
 }

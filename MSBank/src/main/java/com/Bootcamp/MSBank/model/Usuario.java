@@ -3,7 +3,8 @@ package com.Bootcamp.MSBank.model;
 import lombok.*;
 
 @Getter
-@Setter @NoArgsConstructor
+@Setter
+@NoArgsConstructor
 public class Usuario {
     private String nombre;
     private String apellido;
@@ -15,7 +16,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
+        return "{" +
                 "nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 '}';

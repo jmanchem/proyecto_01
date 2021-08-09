@@ -5,8 +5,11 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
+
 //@Repository
 public interface SavingAccountRepository extends MongoRepository<SavingAccount,String> {
-    @Query(value = "{customerId: ?0}", count = true)
-    public long findSavingAccountByCustomerId(String customerId);
+    //@Query(value = "{customerId: ?0}", count = true)
+    public List<SavingAccount> findSavingAccountByCustomerId(String customerId);
 }
