@@ -4,5 +4,5 @@ import com.Bootcamp.MSBank.model.CurrentAccount;
 
 public interface CurrentAccountService {
     public CurrentAccount createCurrentAccount(CurrentAccount currentAccount);
-    public CurrentAccount findCurrentAccountById(String id);
+    public CurrentAccount findCurrentAccountById(String accountIdC);
 }

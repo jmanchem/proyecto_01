@@ -21,11 +21,10 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
-    public Transaction findTransactionById(String id){
+    public Transaction findTransactionById(String transactionId){
         return transactionRepository
-                .findById(id)
+                .findById(transactionId)
                 .orElseThrow(() -> new IllegalArgumentException("Transaction doesn't exist"));
     }
-
 
 }

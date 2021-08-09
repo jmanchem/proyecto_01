@@ -21,9 +21,9 @@ public class CreditServiceImpl implements CreditService {
     }
 
     @Override
-    public Credit findCreditById(String id){
+    public Credit findCreditById(String creditId){
         return  this.creditRepository
-                .findById(id)
+                .findById(creditId)
                 .orElseThrow(() -> new IllegalArgumentException("Credit doesn't exist"));
     }
 }

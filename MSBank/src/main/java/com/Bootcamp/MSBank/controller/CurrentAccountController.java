@@ -21,9 +21,9 @@ public class CurrentAccountController {
         return this.currentAccountService.createCurrentAccount(currentAccount);
     }
 
-    @GetMapping("/findCurrentAccountById/{id}")
-    public CurrentAccount findCurrentAccountById(@PathVariable String id){
-        return  this.currentAccountService.findCurrentAccountById(id);
+    @GetMapping("/findCurrentAccountById/{accountIdC}")
+    public CurrentAccount findCurrentAccountById(@PathVariable String accountIdC){
+        return  this.currentAccountService.findCurrentAccountById(accountIdC);
     }
 
 }

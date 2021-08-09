@@ -15,9 +15,9 @@ public class FixedTermImpl implements FixedTermService {
         return this.fixedTermRepository.save(fixedTerm);
     }
     @Override
-    public FixedTerm findFixedTermById(String accuntId) {
+    public FixedTerm findFixedTermById(String accountIdF) {
         return this.fixedTermRepository
-                .findById(accuntId)
+                .findById(accountIdF)
                 .orElseThrow(()-> new IllegalArgumentException("Account not found"));
     }
 }

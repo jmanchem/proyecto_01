@@ -21,9 +21,9 @@ public class CurrentAccountServiceImpl implements CurrentAccountService {
     }
 
     @Override
-    public CurrentAccount findCurrentAccountById(String id){
+    public CurrentAccount findCurrentAccountById(String accountIdC){
         return this.currentAccountRepository
-                .findById(id)
+                .findById(accountIdC)
                 .orElseThrow(() -> new IllegalArgumentException("Current Account doesn't exist"));
 
     }

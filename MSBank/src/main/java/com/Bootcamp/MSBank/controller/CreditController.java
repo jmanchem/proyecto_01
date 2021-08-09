@@ -21,9 +21,9 @@ public class CreditController {
         return this.creditService.createCredit(credit);
     }
 
-    @GetMapping("/findCreditById/{id}")
-    public Credit findCreditById(@PathVariable String id){
-        return  this.creditService.findCreditById(id);
+    @GetMapping("/findCreditById/{creditId}")
+    public Credit findCreditById(@PathVariable String creditId){
+        return  this.creditService.findCreditById(creditId);
     }
 
 }
