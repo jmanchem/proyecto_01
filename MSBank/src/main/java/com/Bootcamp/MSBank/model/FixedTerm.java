@@ -9,6 +9,8 @@ public class FixedTerm {
     @Id //Propiedade
     private String accountIdF;
     private String customerId; //Id customer
+    private String customerTypeEP;
+    private String customerTypeTF;
     private String accountNumber;
     private String cardId;
     private String cardNumber;

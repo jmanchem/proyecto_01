@@ -15,7 +15,7 @@ public class Customer {
     private String documentNumber;
     private String phoneNumber;
     private String email;
-    private String customerType;
-    private String customerType2;
+    private String customerTypeEP;
+    private String customerTypeTF;
     private Date timestamp;
 }

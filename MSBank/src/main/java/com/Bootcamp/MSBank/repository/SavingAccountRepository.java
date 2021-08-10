@@ -12,4 +12,5 @@ import java.util.List;
 public interface SavingAccountRepository extends MongoRepository<SavingAccount,String> {
     //@Query(value = "{customerId: ?0}", count = true)
     public List<SavingAccount> findSavingAccountByCustomerId(String customerId);
+    //public List<SavingAccount> findSavingAccountByCustomerIdObject(Object[] customerId);
 }

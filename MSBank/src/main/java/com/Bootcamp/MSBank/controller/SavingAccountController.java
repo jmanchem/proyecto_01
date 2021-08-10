@@ -19,7 +19,7 @@ public class SavingAccountController {
     @Autowired
     private SavingAccountService savingAccountService;
     @PostMapping("/createSavingAccount")
-    public SavingAccount createSavingAccount (@RequestBody SavingAccount savingAccount){
+    public Map<String,Object>  createSavingAccount (@RequestBody SavingAccount savingAccount){
         log.info("SavingAccount: "+ savingAccount);
         return this.savingAccountService.createSavingAccount(savingAccount);
     }

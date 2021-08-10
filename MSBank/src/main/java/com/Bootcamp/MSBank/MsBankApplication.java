@@ -16,12 +16,6 @@ public class MsBankApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(MsBankApplication.class, args);
 	}
-
-	@Override
-	public void run(String... args) throws Exception {
-
-	}
-/*
 	@Override
 	public void run(String... args) throws Exception {
 		Flux<String> nombres = Flux.just("Andres Guzman","Pedro Filano","Maria Fulana","Diego Sultano",
@@ -47,8 +41,4 @@ public class MsBankApplication implements CommandLineRunner {
 					}
 				});
 	}
- */
-
-
-
 }

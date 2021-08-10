@@ -9,6 +9,8 @@ public class CurrentAccount {
     @Id
     private String accountIdC;
     private String customerId;
+    private String customerTypeEP;
+    private String customerTypeTF;
     private String accountNumber;
     private String cardId;
     private String cardNumber;

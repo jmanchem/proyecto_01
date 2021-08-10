@@ -18,7 +18,7 @@ public class CurrentAccountController {
     private CurrentAccountService currentAccountService;
 
     @PostMapping("/createCurrentAccount")
-    public CurrentAccount createCurrentAccount(@RequestBody CurrentAccount currentAccount){
+    public Map<String,Object> createCurrentAccount(@RequestBody CurrentAccount currentAccount){
         log.info("current account " + currentAccount);
         return this.currentAccountService.createCurrentAccount(currentAccount);
     }

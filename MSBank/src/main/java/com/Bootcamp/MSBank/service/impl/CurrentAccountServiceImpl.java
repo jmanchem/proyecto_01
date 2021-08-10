@@ -18,9 +18,27 @@ public class CurrentAccountServiceImpl implements CurrentAccountService {
     @Autowired
     private CurrentAccountRepository currentAccountRepository;
     @Override
-    public CurrentAccount createCurrentAccount(CurrentAccount currentAccount){
-        log.info("currentAccount" + currentAccount);
-        return this.currentAccountRepository.save(currentAccount);
+    public Map<String,Object> createCurrentAccount(CurrentAccount currentAccount){
+        //log.info("currentAccount" + currentAccount);
+        //return this.currentAccountRepository.save(currentAccount);
+
+        log.info("getCustomerId(): "+ currentAccount.getCustomerId());
+        List<CurrentAccount> listcurrentAccount=currentAccountRepository.findCurrentAccountByCustomerId(currentAccount.getCustomerId());
+        Integer sizeCurrentAccount=listcurrentAccount.size();
+        Map<String,Object> response = new HashMap<String,Object>();
+        log.info("getCustomerTypeEP(): "+ currentAccount.getCustomerTypeEP());
+        if(currentAccount.getCustomerTypeEP().compareToIgnoreCase("PERSONAL")==0){
+            if(sizeCurrentAccount<1){
+                log.info("listcurrentAccount: "+ listcurrentAccount);
+                response.put("data",this.currentAccountRepository.save(currentAccount));
+            }else{
+                log.info("Entro else: ");
+                response.put("data","You can only save 1 account at most");
+            }
+        }else if(currentAccount.getCustomerTypeEP().compareToIgnoreCase("EMPRESARIAL")==0){
+            response.put("data",this.currentAccountRepository.save(currentAccount));
+        }
+        return response;
     }
     @Override
     public CurrentAccount findCurrentAccountById(String accountIdC){
@@ -36,5 +54,4 @@ public class CurrentAccountServiceImpl implements CurrentAccountService {
         response.put("Total",CurrentAccountpage.size());
         return response;
     }
-
 }

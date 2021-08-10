@@ -8,7 +8,10 @@ import java.util.Date;
 public class SavingAccount {
     @Id //Propiedade
     private String accountIdS;
+    //private Object[] customerId;
     private String customerId;
+    private String customerTypeEP;
+    private String customerTypeTF;
     private String accountNumber;
     private String cardId;
     private String cardNumber;
